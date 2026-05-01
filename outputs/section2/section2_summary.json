@@ -1,0 +1,131 @@
+{
+  "fitted_params": {
+    "vdd_V": 3.2,
+    "c_mem_F": 2.45e-11,
+    "c_fb_F": 3.757e-12,
+    "v_reset_V": 0.7019501289616545,
+    "v_threshold_V": 1.916570626923048,
+    "refractory_s": 1.0908338654150126e-05,
+    "pulse_width_s": 4.7337544830748875e-06,
+    "leak_conductance_s": 0.0,
+    "feedback_cap_scale": 1.0,
+    "current_gain": 3.67507688692467,
+    "total_capacitance_F": 2.8257e-11,
+    "delta_v_V": 1.2146204979613935
+  },
+  "fit_metrics": {
+    "rmse_hz": 132.720610328141,
+    "mape_percent": 0.826713746669317,
+    "mean_threshold_v": 1.916570626923048,
+    "mean_reset_v": 0.7019501289616545,
+    "mean_pulse_width_s": 4.7337544830748875e-06,
+    "constant_current_isi_error_us": 1.4013083912453161
+  },
+  "measured_fi_curve": [
+    {
+      "current_nA": 1.0,
+      "rate_hz": 107.02980428536611
+    },
+    {
+      "current_nA": 1.584893,
+      "rate_hz": 169.2755915603597
+    },
+    {
+      "current_nA": 2.511886,
+      "rate_hz": 267.72880138011163
+    },
+    {
+      "current_nA": 3.981072,
+      "rate_hz": 423.4287176303448
+    },
+    {
+      "current_nA": 6.309573,
+      "rate_hz": 669.1865807256052
+    },
+    {
+      "current_nA": 10.0,
+      "rate_hz": 1056.921711491632
+    },
+    {
+      "current_nA": 15.84893,
+      "rate_hz": 1667.4134160834208
+    },
+    {
+      "current_nA": 25.11886,
+      "rate_hz": 2625.762823816141
+    },
+    {
+      "current_nA": 39.81072,
+      "rate_hz": 4122.8853188017065
+    },
+    {
+      "current_nA": 63.095729999999996,
+      "rate_hz": 6444.096057142294
+    },
+    {
+      "current_nA": 100.0,
+      "rate_hz": 9997.9323494688
+    }
+  ],
+  "modeled_fi_curve": [
+    {
+      "current_nA": 1.0,
+      "rate_hz": 106.95295637307954
+    },
+    {
+      "current_nA": 1.584893,
+      "rate_hz": 169.3934008061869
+    },
+    {
+      "current_nA": 2.511886,
+      "rate_hz": 268.18059384432803
+    },
+    {
+      "current_nA": 3.981072,
+      "rate_hz": 424.31168328932074
+    },
+    {
+      "current_nA": 6.309573,
+      "rate_hz": 670.6729567797928
+    },
+    {
+      "current_nA": 10.0,
+      "rate_hz": 1058.4160767908409
+    },
+    {
+      "current_nA": 15.84893,
+      "rate_hz": 1666.2243550679525
+    },
+    {
+      "current_nA": 25.11886,
+      "rate_hz": 2613.0089593298017
+    },
+    {
+      "current_nA": 39.81072,
+      "rate_hz": 4073.4306655829428
+    },
+    {
+      "current_nA": 63.095729999999996,
+      "rate_hz": 6292.415832034824
+    },
+    {
+      "current_nA": 100.0,
+      "rate_hz": 9587.883340014181
+    }
+  ],
+  "snn_smoke_test": {
+    "status": "ok",
+    "output_shape": [
+      8,
+      10
+    ],
+    "mean_output_spike_rate": 0.20000000298023224,
+    "max_output_spike_rate": 0.20000000298023224
+  },
+  "artifacts": {
+    "fi_curve": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section2/section2_fi_curve.png",
+    "constant_overlay": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section2/section2_constant_current_overlay.png",
+    "measured_pulse_trace": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section2/section2_measured_pulse_trace.png",
+    "synthetic_pulse_demo": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section2/section2_synthetic_pulse_demo.png"
+  }
+}
