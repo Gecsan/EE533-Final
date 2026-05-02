@@ -1,7 +1,7 @@
 {
   "fitted_params": {
     "vdd_V": 3.2,
-    "c_mem_F": 2.45e-11,
+    "c_mem_F": 1e-11,
     "c_fb_F": 3.757e-12,
     "v_reset_V": 0.7019501289616545,
     "v_threshold_V": 1.916570626923048,
@@ -9,13 +9,13 @@
     "pulse_width_s": 4.7337544830748875e-06,
     "leak_conductance_s": 0.0,
     "feedback_cap_scale": 1.0,
-    "current_gain": 3.67507688692467,
-    "total_capacitance_F": 2.8257e-11,
+    "current_gain": 1.7892215285919484,
+    "total_capacitance_F": 1.3757e-11,
     "delta_v_V": 1.2146204979613935
   },
   "fit_metrics": {
-    "rmse_hz": 132.720610328141,
-    "mape_percent": 0.826713746669317,
+    "rmse_hz": 132.7206103281415,
+    "mape_percent": 0.8267137466693171,
     "mean_threshold_v": 1.916570626923048,
     "mean_reset_v": 0.7019501289616545,
     "mean_pulse_width_s": 4.7337544830748875e-06,
@@ -74,7 +74,7 @@
     },
     {
       "current_nA": 1.584893,
-      "rate_hz": 169.3934008061869
+      "rate_hz": 169.39340080618686
     },
     {
       "current_nA": 2.511886,
@@ -94,11 +94,11 @@
     },
     {
       "current_nA": 15.84893,
-      "rate_hz": 1666.2243550679525
+      "rate_hz": 1666.2243550679527
     },
     {
       "current_nA": 25.11886,
-      "rate_hz": 2613.0089593298017
+      "rate_hz": 2613.008959329801
     },
     {
       "current_nA": 39.81072,
@@ -110,7 +110,7 @@
     },
     {
       "current_nA": 100.0,
-      "rate_hz": 9587.883340014181
+      "rate_hz": 9587.88334001418
     }
   ],
   "snn_smoke_test": {

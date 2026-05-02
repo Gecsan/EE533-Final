@@ -25,7 +25,7 @@ class CadenceNeuronParameters:
     """Behavioral neuron parameters derived from the Cadence circuit."""
 
     vdd: float = 3.2
-    c_mem: float = 24.5e-12
+    c_mem: float = 10e-12
     c_fb: float = 3.757e-12
     v_reset: float = 1.12
     v_threshold: float = 1.83
@@ -143,12 +143,18 @@ def simulate_neuron(
     dt_s: float,
     input_current: float | Callable[[np.ndarray], np.ndarray],
     vmem0: float | None = None,
+    reset_fall_s: float = 0.0,
+    spike_peak_v: float | None = None,
 ) -> dict[str, np.ndarray]:
     """Simulate a behavioral integrate-and-fire neuron."""
     if duration_s <= 0:
         raise ValueError("duration_s must be positive")
     if dt_s <= 0:
         raise ValueError("dt_s must be positive")
+    if reset_fall_s < 0:
+        raise ValueError("reset_fall_s must be non-negative")
+    if spike_peak_v is not None and spike_peak_v < params.v_threshold:
+        raise ValueError("spike_peak_v must be at least v_threshold when provided")
 
     time = np.arange(0.0, duration_s + dt_s, dt_s)
     if callable(input_current):
@@ -162,6 +168,9 @@ def simulate_neuron(
 
     refractory_until = -np.inf
     pulse_active_until = -np.inf
+    resetting_until = -np.inf
+    reset_start_t = -np.inf
+    reset_start_v = params.v_reset
     spike_times: list[float] = []
 
     for idx in range(1, len(time)):
@@ -169,7 +178,10 @@ def simulate_neuron(
         t_now = time[idx]
         previous_v = vmem[idx - 1]
 
-        if t_prev < refractory_until:
+        if t_prev < resetting_until:
+            progress = min(1.0, (t_now - reset_start_t) / reset_fall_s) if reset_fall_s > 0 else 1.0
+            next_v = reset_start_v + (params.v_reset - reset_start_v) * progress
+        elif t_prev < refractory_until:
             next_v = params.v_reset
         else:
             dv_charge = params.current_gain * current[idx - 1] * dt_s / params.total_capacitance
@@ -178,8 +190,11 @@ def simulate_neuron(
 
         if next_v >= params.v_threshold and t_prev >= refractory_until:
             spike_times.append(t_now)
-            next_v = params.v_reset
-            refractory_until = t_now + params.refractory_s
+            reset_start_v = spike_peak_v if spike_peak_v is not None else next_v
+            reset_start_t = t_now
+            resetting_until = t_now + reset_fall_s
+            next_v = reset_start_v if reset_fall_s > 0 else params.v_reset
+            refractory_until = t_now + max(params.refractory_s, reset_fall_s)
             pulse_active_until = t_now + params.pulse_width_s
 
         vmem[idx] = next_v
@@ -542,3 +557,28 @@ if torch is not None:
         @property
         def v(self) -> torch.Tensor:
             return self._vmem
+
+
+__all__ = [
+    "CadenceNeuronParameters",
+    "CadenceTraceMeasurement",
+    "CadenceFitResult",
+    "calibrate_current_gain_from_point",
+    "analytical_rate_hz",
+    "fi_curve",
+    "constant_current_waveform",
+    "pulsed_current_waveform",
+    "simulate_neuron",
+    "measure_firing_rate",
+    "nearest_neighbor_timing_error_s",
+    "extract_spike_edges_from_vout",
+    "extract_spike_times_from_vout",
+    "estimate_threshold_and_reset_from_vmem",
+    "measure_pulse_width_s",
+    "load_cadence_trace_csv",
+    "load_cadence_fi_sweep",
+    "fit_cadence_parameters_from_sweep",
+]
+
+if torch is not None:
+    __all__.append("CircuitIFNode")

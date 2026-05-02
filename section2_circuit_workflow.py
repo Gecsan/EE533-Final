@@ -37,7 +37,7 @@ OUTPUT_DIR = ROOT / "outputs" / "section2"
 def build_base_params() -> CadenceNeuronParameters:
     return CadenceNeuronParameters(
         vdd=3.2,
-        c_mem=24.5e-12,
+        c_mem=10e-12,
         c_fb=3.757e-12,
         v_reset=1.12,
         v_threshold=1.83,
@@ -182,26 +182,25 @@ def plot_measured_pulse_trace() -> Path:
 
 
 def plot_synthetic_pulse_demo(params: CadenceNeuronParameters) -> Path:
-    # Keep the measured f-I fit unchanged and only tune the demo pulse plot so
-    # the membrane has visible recovery between pulses instead of stair-stepping.
-    pulse_demo_params = params.with_updates(leak_conductance_s=1000.0)
+    pulse_demo_params = params.with_updates(
+        leak_conductance_s=500.0,
+        pulse_width_s=40e-6,
+    )
+    input_current_a = 10e-9
     sim = simulate_neuron(
         params=pulse_demo_params,
         duration_s=3e-3,
         dt_s=0.1e-6,
-        input_current=pulsed_current_waveform(
-            baseline_a=0.0,
-            pulse_a=65e-9,
-            start_s=0.4e-3,
-            width_s=0.16e-3,
-            period_s=0.40e-3,
-        ),
+        reset_fall_s=30e-6,
+        spike_peak_v=2.15,
+        input_current=constant_current_waveform(input_current_a),
+        vmem0=pulse_demo_params.v_reset,
     )
 
     fig, axes = plt.subplots(3, 1, figsize=(9, 7), sharex=True)
     axes[0].plot(sim["time_s"] * 1e3, sim["input_current_a"] * 1e9, color="tab:blue")
-    axes[0].set_ylabel("Iin (nA)")
-    axes[0].set_title("Synthetic pulsed-current demo with pulse-tuned recovery")
+    axes[0].set_ylabel("Ichg (nA)")
+    axes[0].set_title("Synthetic charge-spike-reset demo")
 
     axes[1].plot(sim["time_s"] * 1e3, sim["vmem_v"], color="tab:green")
     axes[1].axhline(pulse_demo_params.v_threshold, linestyle=":", color="black", linewidth=1)

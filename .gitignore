@@ -7,3 +7,4 @@ documents/EE533Final1C.csv
 __pycache__/
 .matplotlib/
 .cache/
+outputs/section2/section2_debug_input_current.png
