@@ -1,0 +1,59 @@
+{
+  "section2_params": {
+    "vdd": 3.2,
+    "c_mem": 1e-11,
+    "c_fb": 3.757e-12,
+    "v_reset": 0.7019501289616545,
+    "v_threshold": 1.916570626923048,
+    "refractory_s": 1.0908338654150126e-05,
+    "pulse_width_s": 4.7337544830748875e-06,
+    "leak_conductance_s": 0.0,
+    "feedback_cap_scale": 1.0,
+    "current_gain": 1.7892215285919484
+  },
+  "constant_current": {
+    "label": "Constant Current",
+    "csv": "533FINALConstCurrentData.csv",
+    "metrics": {
+      "reference_rate_hz": 5146.29935918409,
+      "model_rate_hz": 5146.299343772223,
+      "rate_error_hz": 1.54118661157554e-05,
+      "mean_spike_timing_error_us": 0.0020304525945214016
+    },
+    "current_stats": {
+      "mean_current_nA": -2193.5854644873602,
+      "std_current_nA": 878456.957005205,
+      "min_current_nA": -2168310.2114418033,
+      "max_current_nA": 1900036.903132126
+    },
+    "spike_count_cadence": 2572,
+    "spike_count_python": 2572
+  },
+  "pulsed_current": {
+    "label": "Pulsed Current",
+    "csv": "533FINALPulseCurrentData.csv",
+    "metrics": {
+      "reference_rate_hz": 5146.291852639811,
+      "model_rate_hz": 5146.291873986455,
+      "rate_error_hz": 2.1346644643926993e-05,
+      "mean_spike_timing_error_us": 0.0020400192288511443
+    },
+    "current_stats": {
+      "mean_current_nA": -2958.745644335679,
+      "std_current_nA": 878613.14901693,
+      "min_current_nA": -2167553.274058199,
+      "max_current_nA": 1900328.9632918874
+    },
+    "spike_count_cadence": 2572,
+    "spike_count_python": 2572
+  },
+  "artifacts": {
+    "constant_overlay": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section3_validation/section3_constant_current_overlay.png",
+    "pulse_overlay": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section3_validation/section3_pulsed_current_overlay.png"
+  },
+  "notes": [
+    "Section 3 reuses the exact fitted neuron parameters from Section 2.",
+    "The input-current waveform is inferred directly from the measured Cadence trace because the exported CSVs do not include an explicit input-current column.",
+    "If a dedicated Cadence pulse-current source export becomes available, replace the inferred waveform with the exact exported source waveform."
+  ]
+}
