@@ -1,0 +1,86 @@
+{
+  "source_summary": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_scaled_4na_summary.json",
+  "target_stop_s": 0.5,
+  "hold_behavior": "The last PWL current value is explicitly held constant through 500 ms.",
+  "python_replay": {
+    "current_gain_scale": 0.92,
+    "refractory_scale": 0.8,
+    "dt_ns": 100.0,
+    "initial_vmem_v": 0.0
+  },
+  "waveforms": [
+    {
+      "neuron_index": 36,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_36_input_500ms_hold.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_36_source_500ms_hold.scs",
+      "initial_vmem_v": 0.0,
+      "hold_current_nA": 3.7736373669459997,
+      "spike_count_0_500ms": 184,
+      "spike_times_first_20ms_us": [
+        4238.599999999999,
+        6937.4,
+        9636.199999999999,
+        12334.999999999998,
+        15033.8,
+        17732.6
+      ],
+      "rate_0_20ms_hz": 370.5350526159775,
+      "rate_200_500ms_hz": 370.53505261597746
+    },
+    {
+      "neuron_index": 78,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_78_input_500ms_hold.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_78_source_500ms_hold.scs",
+      "initial_vmem_v": 0.0,
+      "hold_current_nA": 3.785047693139,
+      "spike_count_0_500ms": 185,
+      "spike_times_first_20ms_us": [
+        4226.2,
+        6916.9,
+        9607.599999999999,
+        12298.3,
+        14988.999999999998,
+        17679.7
+      ],
+      "rate_0_20ms_hz": 371.6504998699223,
+      "rate_200_500ms_hz": 371.6504998699223
+    },
+    {
+      "neuron_index": 152,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_152_input_500ms_hold.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_152_source_500ms_hold.scs",
+      "initial_vmem_v": 0.0,
+      "hold_current_nA": 4.023834790206,
+      "spike_count_0_500ms": 196,
+      "spike_times_first_20ms_us": [
+        3981.3,
+        6512.9,
+        9044.5,
+        11576.099999999999,
+        14107.699999999999,
+        16639.3,
+        19170.899999999998
+      ],
+      "rate_0_20ms_hz": 395.00711012798234,
+      "rate_200_500ms_hz": 395.0071101279824
+    },
+    {
+      "neuron_index": 245,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_245_input_500ms_hold.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na_500ms_hold/section5_neuron_245_source_500ms_hold.scs",
+      "initial_vmem_v": 0.0,
+      "hold_current_nA": 3.676401585632,
+      "spike_count_0_500ms": 179,
+      "spike_times_first_20ms_us": [
+        4348.099999999999,
+        7118.099999999999,
+        9888.1,
+        12658.1,
+        15428.1,
+        18198.1
+      ],
+      "rate_0_20ms_hz": 361.0108303249098,
+      "rate_200_500ms_hz": 361.01083032490976
+    }
+  ]
+}

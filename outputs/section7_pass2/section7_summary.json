@@ -1,0 +1,214 @@
+{
+  "config": {
+    "epochs": 2,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "current_scale_a": 2.5e-06,
+    "dt_s": 4.9999999999999996e-06,
+    "train_subset": 4000,
+    "test_subset": 2000,
+    "num_workers": 0,
+    "seed": 0,
+    "target_accuracy": 0.75,
+    "hidden_sizes": [
+      64,
+      128
+    ],
+    "time_steps": [
+      10,
+      5
+    ],
+    "quant_bits": [
+      8,
+      4,
+      2
+    ],
+    "image_sizes": [
+      28
+    ]
+  },
+  "device": "cpu",
+  "candidate_results": [
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 2,
+      "train_accuracy": 0.82375,
+      "test_accuracy_pre_quant": 0.7845,
+      "test_accuracy": 0.7885
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 4,
+      "train_accuracy": 0.825,
+      "test_accuracy_pre_quant": 0.7855,
+      "test_accuracy": 0.7865
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 8,
+      "train_accuracy": 0.8275,
+      "test_accuracy_pre_quant": 0.779,
+      "test_accuracy": 0.7785
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 2,
+      "train_accuracy": 0.83025,
+      "test_accuracy_pre_quant": 0.7835,
+      "test_accuracy": 0.7935
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 4,
+      "train_accuracy": 0.83025,
+      "test_accuracy_pre_quant": 0.787,
+      "test_accuracy": 0.7895
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 8,
+      "train_accuracy": 0.8315,
+      "test_accuracy_pre_quant": 0.7875,
+      "test_accuracy": 0.797
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 5,
+      "quant_bits": 2,
+      "train_accuracy": 0.7625,
+      "test_accuracy_pre_quant": 0.732,
+      "test_accuracy": 0.711
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 5,
+      "quant_bits": 4,
+      "train_accuracy": 0.7745,
+      "test_accuracy_pre_quant": 0.7385,
+      "test_accuracy": 0.741
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 5,
+      "quant_bits": 8,
+      "train_accuracy": 0.73,
+      "test_accuracy_pre_quant": 0.721,
+      "test_accuracy": 0.719
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 5,
+      "quant_bits": 2,
+      "train_accuracy": 0.7625,
+      "test_accuracy_pre_quant": 0.7245,
+      "test_accuracy": 0.72
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 5,
+      "quant_bits": 4,
+      "train_accuracy": 0.76325,
+      "test_accuracy_pre_quant": 0.7305,
+      "test_accuracy": 0.7275
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 5,
+      "quant_bits": 8,
+      "train_accuracy": 0.7595,
+      "test_accuracy_pre_quant": 0.735,
+      "test_accuracy": 0.7355
+    }
+  ],
+  "passing_candidates": [
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 2,
+      "train_accuracy": 0.82375,
+      "test_accuracy_pre_quant": 0.7845,
+      "test_accuracy": 0.7885
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 4,
+      "train_accuracy": 0.825,
+      "test_accuracy_pre_quant": 0.7855,
+      "test_accuracy": 0.7865
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 8,
+      "train_accuracy": 0.8275,
+      "test_accuracy_pre_quant": 0.779,
+      "test_accuracy": 0.7785
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 2,
+      "train_accuracy": 0.83025,
+      "test_accuracy_pre_quant": 0.7835,
+      "test_accuracy": 0.7935
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 4,
+      "train_accuracy": 0.83025,
+      "test_accuracy_pre_quant": 0.787,
+      "test_accuracy": 0.7895
+    },
+    {
+      "image_size": 28,
+      "hidden_size": 128,
+      "time_steps": 10,
+      "quant_bits": 8,
+      "train_accuracy": 0.8315,
+      "test_accuracy_pre_quant": 0.7875,
+      "test_accuracy": 0.797
+    }
+  ],
+  "best_simplified_model": {
+    "image_size": 28,
+    "hidden_size": 64,
+    "time_steps": 10,
+    "quant_bits": 2,
+    "train_accuracy": 0.82375,
+    "test_accuracy_pre_quant": 0.7845,
+    "test_accuracy": 0.7885
+  },
+  "artifacts": {
+    "candidate_accuracy": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7/section7_candidate_accuracy.png"
+  },
+  "notes": [
+    "All candidates use the circuit-informed surrogate model only.",
+    "A candidate counts as valid when its post-quantization test accuracy is at least 75%.",
+    "The reported best simplified model is the smallest passing candidate according to hidden size, time steps, quantization bits, and image size."
+  ]
+}

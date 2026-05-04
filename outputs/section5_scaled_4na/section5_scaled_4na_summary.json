@@ -1,0 +1,47 @@
+{
+  "source_summary": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_waveform_summary.json",
+  "target_mean_current_nA": 4.0,
+  "notes": [
+    "These waveforms are amplitude-scaled versions of the original Section 5 hidden-neuron currents.",
+    "They were generated to reduce saturation in Cadence.",
+    "At this lower current range, the single-neuron Python replay may produce few or zero spikes over the original 100 us window."
+  ],
+  "scaled_waveforms": [
+    {
+      "neuron_index": 36,
+      "scale_factor": 0.000962877188284724,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_36_input_4nAavg.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_36_source_4nAavg.scs",
+      "mean_current_nA": 4.0,
+      "max_current_nA": 4.856591271275656,
+      "python_spike_times_us": []
+    },
+    {
+      "neuron_index": 78,
+      "scale_factor": 0.0009512125909766393,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_78_input_4nAavg.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_78_source_4nAavg.scs",
+      "mean_current_nA": 4.0,
+      "max_current_nA": 4.538868994668495,
+      "python_spike_times_us": []
+    },
+    {
+      "neuron_index": 152,
+      "scale_factor": 0.0009307322860069013,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_152_input_4nAavg.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_152_source_4nAavg.scs",
+      "mean_current_nA": 4.0,
+      "max_current_nA": 4.593536811945314,
+      "python_spike_times_us": []
+    },
+    {
+      "neuron_index": 245,
+      "scale_factor": 0.0009747951214444901,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_245_input_4nAavg.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_245_source_4nAavg.scs",
+      "mean_current_nA": 4.0,
+      "max_current_nA": 4.621261080752106,
+      "python_spike_times_us": []
+    }
+  ]
+}

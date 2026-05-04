@@ -1,0 +1,65 @@
+{
+  "task": "Section 7: Network simplification with circuit-informed surrogate SNN",
+  "target_accuracy": 0.75,
+  "final_takeaways": {
+    "best_smallest_hidden_model": {
+      "image_size": 28,
+      "hidden_size": 32,
+      "time_steps": 20,
+      "quant_bits": 8,
+      "test_accuracy": 0.76
+    },
+    "best_reduced_time_step_model": {
+      "image_size": 28,
+      "hidden_size": 64,
+      "time_steps": 10,
+      "quant_bits": 2,
+      "test_accuracy": 0.7885
+    },
+    "resolution_limit": {
+      "best_tested_reduced_resolution_model": {
+        "image_size": 14,
+        "hidden_size": 128,
+        "time_steps": 20,
+        "quant_bits": 8,
+        "test_accuracy": 0.739
+      },
+      "passed_target": false
+    }
+  },
+  "conclusions": [
+    "Hidden layer size can be reduced from 512 to 32 neurons while staying above 75% accuracy, provided the network keeps 28x28 resolution, 20 time steps, and 8-bit weights.",
+    "Time steps can be reduced from 20 to 10 while staying above 75% accuracy, but this requires at least 64 hidden neurons at 28x28 resolution.",
+    "Weight precision can be reduced to 2 bits and still remain above 75% accuracy when using 28x28 inputs, 64 hidden neurons, and 10 time steps.",
+    "Input resolution could not be reduced below 28x28 in this practical run while maintaining the 75% target."
+  ],
+  "supporting_runs": {
+    "hidden_and_quantization_search": {
+      "summary": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7_pass1/section7_summary.json",
+      "plot": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7/section7_hidden_quantization_candidates.png"
+    },
+    "time_step_search": {
+      "summary": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7_pass2/section7_summary.json",
+      "plot": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7/section7_time_step_candidates.png"
+    },
+    "resolution_search": {
+      "plot": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section7/section7_resolution_candidates.png"
+    }
+  },
+  "recommended_report_configuration": {
+    "image_size": 28,
+    "hidden_size": 32,
+    "time_steps": 20,
+    "quant_bits": 8,
+    "test_accuracy": 0.76,
+    "reason": "This is the smallest hidden-layer simplification that still clears the 75% target in the tested search."
+  },
+  "alternate_configuration": {
+    "image_size": 28,
+    "hidden_size": 64,
+    "time_steps": 10,
+    "quant_bits": 2,
+    "test_accuracy": 0.7885,
+    "reason": "This version keeps accuracy higher while reducing both time steps and quantization more aggressively."
+  }
+}

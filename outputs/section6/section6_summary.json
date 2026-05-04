@@ -1,0 +1,253 @@
+{
+  "config": {
+    "surrogate_epochs": 3,
+    "stdp_epochs": 2,
+    "classifier_epochs": 3,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "stdp_learning_rate": 0.01,
+    "trace_decay": 0.9,
+    "hidden_features": 128,
+    "current_scale_a": 2.5e-06,
+    "dt_s": 4.9999999999999996e-06,
+    "resolution_baseline": 28,
+    "time_steps_baseline": 20,
+    "train_subset": 4000,
+    "test_subset": 2000,
+    "num_workers": 0,
+    "seed": 0
+  },
+  "device": "cpu",
+  "circuit_params": {
+    "v_reset_V": 0.7019501289616545,
+    "v_threshold_V": 1.916570626923048,
+    "refractory_s": 1.0908338654150126e-05,
+    "pulse_width_s": 4.7337544830748875e-06,
+    "current_gain": 1.7892215285919484,
+    "c_mem_F": 1e-11,
+    "c_fb_F": 3.757e-12
+  },
+  "baseline_accuracy_by_training_method": {
+    "surrogate": {
+      "lif": 0.8195,
+      "circuit": 0.827
+    },
+    "stdp": {
+      "lif": 0.173,
+      "circuit": 0.1085
+    }
+  },
+  "resolution_sweep": {
+    "surrogate": {
+      "lif": [
+        {
+          "image_size": 4,
+          "accuracy": 0.1665
+        },
+        {
+          "image_size": 7,
+          "accuracy": 0.5875
+        },
+        {
+          "image_size": 14,
+          "accuracy": 0.7745
+        },
+        {
+          "image_size": 28,
+          "accuracy": 0.827
+        }
+      ],
+      "circuit": [
+        {
+          "image_size": 4,
+          "accuracy": 0.287
+        },
+        {
+          "image_size": 7,
+          "accuracy": 0.554
+        },
+        {
+          "image_size": 14,
+          "accuracy": 0.7395
+        },
+        {
+          "image_size": 28,
+          "accuracy": 0.824
+        }
+      ]
+    },
+    "stdp": {
+      "lif": [
+        {
+          "image_size": 4,
+          "accuracy": 0.165
+        },
+        {
+          "image_size": 7,
+          "accuracy": 0.139
+        },
+        {
+          "image_size": 14,
+          "accuracy": 0.42
+        },
+        {
+          "image_size": 28,
+          "accuracy": 0.195
+        }
+      ],
+      "circuit": [
+        {
+          "image_size": 4,
+          "accuracy": 0.089
+        },
+        {
+          "image_size": 7,
+          "accuracy": 0.116
+        },
+        {
+          "image_size": 14,
+          "accuracy": 0.117
+        },
+        {
+          "image_size": 28,
+          "accuracy": 0.1095
+        }
+      ]
+    }
+  },
+  "time_step_sweep": {
+    "surrogate": {
+      "lif": [
+        {
+          "time_steps": 5,
+          "accuracy": 0.7955
+        },
+        {
+          "time_steps": 10,
+          "accuracy": 0.8055
+        },
+        {
+          "time_steps": 20,
+          "accuracy": 0.827
+        }
+      ],
+      "circuit": [
+        {
+          "time_steps": 5,
+          "accuracy": 0.7825
+        },
+        {
+          "time_steps": 10,
+          "accuracy": 0.815
+        },
+        {
+          "time_steps": 20,
+          "accuracy": 0.811
+        }
+      ]
+    },
+    "stdp": {
+      "lif": [
+        {
+          "time_steps": 5,
+          "accuracy": 0.1995
+        },
+        {
+          "time_steps": 10,
+          "accuracy": 0.118
+        },
+        {
+          "time_steps": 20,
+          "accuracy": 0.1895
+        }
+      ],
+      "circuit": [
+        {
+          "time_steps": 5,
+          "accuracy": 0.1085
+        },
+        {
+          "time_steps": 10,
+          "accuracy": 0.1085
+        },
+        {
+          "time_steps": 20,
+          "accuracy": 0.117
+        }
+      ]
+    }
+  },
+  "quantization_sweep": {
+    "surrogate": {
+      "lif": [
+        {
+          "bits": 2,
+          "accuracy": 0.7955
+        },
+        {
+          "bits": 4,
+          "accuracy": 0.815
+        },
+        {
+          "bits": 8,
+          "accuracy": 0.817
+        }
+      ],
+      "circuit": [
+        {
+          "bits": 2,
+          "accuracy": 0.807
+        },
+        {
+          "bits": 4,
+          "accuracy": 0.8305
+        },
+        {
+          "bits": 8,
+          "accuracy": 0.828
+        }
+      ]
+    },
+    "stdp": {
+      "lif": [
+        {
+          "bits": 2,
+          "accuracy": 0.211
+        },
+        {
+          "bits": 4,
+          "accuracy": 0.1855
+        },
+        {
+          "bits": 8,
+          "accuracy": 0.1765
+        }
+      ],
+      "circuit": [
+        {
+          "bits": 2,
+          "accuracy": 0.1095
+        },
+        {
+          "bits": 4,
+          "accuracy": 0.1085
+        },
+        {
+          "bits": 8,
+          "accuracy": 0.1085
+        }
+      ]
+    }
+  },
+  "artifacts": {
+    "training_method_accuracy": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section6/section6_training_method_accuracy.png",
+    "resolution_sweep": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section6/section6_resolution_sweep.png",
+    "time_step_sweep": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section6/section6_timestep_sweep.png",
+    "quantization_sweep": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section6/section6_quantization_sweep.png"
+  },
+  "analysis_notes": [
+    "Surrogate training is supervised end-to-end with gradient descent.",
+    "The STDP branch uses unsupervised competitive spike-based feature learning followed by a supervised linear classifier on frozen features.",
+    "The same hidden-layer width is used across the compared models in each run."
+  ]
+}

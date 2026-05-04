@@ -1,0 +1,151 @@
+{
+  "section4_retrain_final_metrics": {
+    "epoch": 3,
+    "train_loss": 2.0283399196624754,
+    "train_accuracy": 0.9076,
+    "test_loss": 2.0400535278320313,
+    "test_accuracy": 0.8795
+  },
+  "reference_image": {
+    "label": 7,
+    "prediction": 7,
+    "tensor_path": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_reference_image.pt"
+  },
+  "selected_neurons": [
+    36,
+    78,
+    152,
+    245
+  ],
+  "time_step_dt_us": 5.0,
+  "time_steps": 20,
+  "waveforms": [
+    {
+      "neuron_index": 36,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_36_input.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_36_source.scs"
+    },
+    {
+      "neuron_index": 78,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_78_input.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_78_source.scs"
+    },
+    {
+      "neuron_index": 152,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_152_input.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_152_source.scs"
+    },
+    {
+      "neuron_index": 245,
+      "pwlf": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_245_input.pwlf",
+      "spectre": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_neuron_245_source.scs"
+    }
+  ],
+  "python_reference": [
+    {
+      "neuron_index": 36,
+      "spike_steps": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "spike_times_us": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "mean_current_nA": 4154.216185270343,
+      "max_current_nA": 5043.832516093971,
+      "final_vmem_V": 0.7019501328468323
+    },
+    {
+      "neuron_index": 78,
+      "spike_steps": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "spike_times_us": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "mean_current_nA": 4205.158802506048,
+      "max_current_nA": 4771.666226588422,
+      "final_vmem_V": 0.7019501328468323
+    },
+    {
+      "neuron_index": 152,
+      "spike_steps": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "spike_times_us": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "mean_current_nA": 4297.691248211777,
+      "max_current_nA": 4935.400738759199,
+      "final_vmem_V": 0.7019501328468323
+    },
+    {
+      "neuron_index": 245,
+      "spike_steps": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "spike_times_us": [
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0
+      ],
+      "mean_current_nA": 4103.426363144536,
+      "max_current_nA": 4740.751137433108,
+      "final_vmem_V": 0.7019501328468323
+    }
+  ],
+  "artifacts": {
+    "waveform_plot": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_four_neuron_waveforms.png",
+    "checkpoint": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5/section5_model_checkpoint.pt"
+  },
+  "cadence_notes": [
+    "Each .pwlf file is a two-column time/current waveform in SI units.",
+    "Each .scs file is a Spectre isource snippet using the same waveform points.",
+    "Hook each waveform to one of the four replicated neuron instances and export vmem/vout for comparison."
+  ]
+}

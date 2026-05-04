@@ -1,0 +1,154 @@
+{
+  "cadence_csv": "/Users/gecsanreyes/Downloads/533FinalPart5Cadence.csv",
+  "reference_summary": "outputs/section5_scaled_4na/section5_scaled_4na_summary.json",
+  "window_ms": 20.0,
+  "python_current_gain_scale": 0.92,
+  "python_refractory_scale": 0.8,
+  "notes": [
+    "Cadence traces were parsed from a single CSV containing interleaved vmem/vout columns for four neurons.",
+    "Spike times are extracted from rising threshold crossings on vout using a 1.6 V threshold.",
+    "Neuron-slot to Python-neuron mapping assumes the same order as the reference summary.",
+    "When --match-cadence-duration is used, the Python replay extends to the Cadence stop time and holds the last PWL current value after the final waveform point.",
+    "The Python replay uses the first Cadence vmem sample as its initial membrane voltage to better match startup conditions.",
+    "Optional Python replay scaling lets Section 5 timing be tuned without overwriting the original Section 2 fit."
+  ],
+  "match_cadence_duration": true,
+  "per_neuron": [
+    {
+      "slot": 1,
+      "neuron_index": 36,
+      "waveform_path": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_36_input_4nAavg.pwlf",
+      "reference_spike_times_us": [
+        4238.6,
+        6937.400000000001,
+        9636.2,
+        12335.0,
+        15033.800000000001,
+        17732.600000000002
+      ],
+      "cadence_spike_times_us": [
+        4646.157824703753,
+        7129.641983307784,
+        9613.34247340665,
+        12097.10611817455,
+        14580.72457886802,
+        17063.649790138068,
+        19547.177097231728
+      ],
+      "cadence_spike_count": 7,
+      "reference_spike_count": 6,
+      "cadence_vmem_max_v": 2.272857077425671,
+      "cadence_vout_max_v": 3.199790098952711,
+      "python_dt_ns": 100.00000000000001,
+      "python_initial_vmem_v": 4.66315888340866e-09,
+      "python_current_gain_scale": 0.92,
+      "python_refractory_scale": 0.8,
+      "paired_spikes": 6,
+      "mean_abs_timing_error_us": 330.42947457070886,
+      "max_abs_timing_error_us": 668.9502098619341,
+      "mean_abs_timing_error_ns": 330429.4745707089
+    },
+    {
+      "slot": 2,
+      "neuron_index": 78,
+      "waveform_path": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_78_input_4nAavg.pwlf",
+      "reference_spike_times_us": [
+        4226.2,
+        6916.900000000001,
+        9607.6,
+        12298.300000000001,
+        14989.0,
+        17679.700000000004
+      ],
+      "cadence_spike_times_us": [
+        4776.363515354804,
+        7333.321043415001,
+        9890.264115706857,
+        12446.69684712639,
+        15003.30615740682,
+        17559.90480282177
+      ],
+      "cadence_spike_count": 6,
+      "reference_spike_count": 6,
+      "cadence_vmem_max_v": 2.272856618744657,
+      "cadence_vout_max_v": 3.199789595485664,
+      "python_dt_ns": 100.00000000000001,
+      "python_initial_vmem_v": 5.140278816040369e-09,
+      "python_current_gain_scale": 0.92,
+      "python_refractory_scale": 0.8,
+      "paired_spikes": 6,
+      "mean_abs_timing_error_us": 255.2911460313509,
+      "max_abs_timing_error_us": 550.1635153548041,
+      "mean_abs_timing_error_ns": 255291.14603135092
+    },
+    {
+      "slot": 3,
+      "neuron_index": 152,
+      "waveform_path": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_152_input_4nAavg.pwlf",
+      "reference_spike_times_us": [
+        3981.3,
+        6512.900000000001,
+        9044.5,
+        11576.1,
+        14107.7,
+        16639.300000000003,
+        19170.9
+      ],
+      "cadence_spike_times_us": [
+        4660.855498884749,
+        7151.74125267894,
+        9642.44525300206,
+        12133.60303669935,
+        14625.00538809674,
+        17116.240447476892,
+        19607.408392906473
+      ],
+      "cadence_spike_count": 7,
+      "reference_spike_count": 7,
+      "cadence_vmem_max_v": 2.27285710274829,
+      "cadence_vout_max_v": 3.199790175936619,
+      "python_dt_ns": 100.00000000000001,
+      "python_initial_vmem_v": 4.67390179837269e-09,
+      "python_current_gain_scale": 0.92,
+      "python_refractory_scale": 0.8,
+      "paired_spikes": 7,
+      "mean_abs_timing_error_us": 557.7998956778855,
+      "max_abs_timing_error_us": 679.5554988847489,
+      "mean_abs_timing_error_ns": 557799.8956778855
+    },
+    {
+      "slot": 4,
+      "neuron_index": 245,
+      "waveform_path": "/Users/gecsanreyes/Desktop/verilog/EE533/EE533-Final/outputs/section5_scaled_4na/section5_neuron_245_input_4nAavg.pwlf",
+      "reference_spike_times_us": [
+        4348.1,
+        7118.1,
+        9888.1,
+        12658.1,
+        15428.100000000002,
+        18198.100000000002
+      ],
+      "cadence_spike_times_us": [
+        4379.508778100741,
+        6716.727172656574,
+        9053.636702906135,
+        11390.79558107441,
+        13727.719386452362,
+        16064.77102347964,
+        18401.61189640216
+      ],
+      "cadence_spike_count": 7,
+      "reference_spike_count": 6,
+      "cadence_vmem_max_v": 2.272859959922227,
+      "cadence_vout_max_v": 3.199790195794387,
+      "python_dt_ns": 100.00000000000001,
+      "python_initial_vmem_v": 4.506064978448382e-09,
+      "python_current_gain_scale": 0.92,
+      "python_refractory_scale": 0.8,
+      "paired_spikes": 6,
+      "mean_abs_timing_error_us": 1061.376485255271,
+      "max_abs_timing_error_us": 2133.3289765203626,
+      "mean_abs_timing_error_ns": 1061376.485255271
+    }
+  ]
+}
